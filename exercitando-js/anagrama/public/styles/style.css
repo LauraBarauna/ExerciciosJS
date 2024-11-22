@@ -1,69 +1,107 @@
-body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(21, 21, 21);
-}
-
+/* Reset básico */
 * {
-    font-family: "Poppins", serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-
-.box{
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f9; /* Fundo claro */
+    color: #333; /* Texto escuro */
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgb(0, 255, 170);
-    width: 350px;
+    min-height: 100vh;
+}
+
+/* Estilo do container principal */
+.a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+/* Estilo da caixa central */
+.box {
+    background: #fff;
+    padding: 2rem;
     border-radius: 10px;
-    margin-top: 50px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
 }
 
-.inputs{
-    margin-bottom: 20px;
-    margin-top: 20px;
+/* Inputs e labels */
+.inputs {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
 }
 
-.input-1{
+.input-1, .input-2 {
     display: flex;
     flex-direction: column;
+    gap: 0.5rem;
+    text-align: left;
 }
 
-.input-2{
-    display: flex;
-    flex-direction: column; 
+label {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #555;
 }
 
-input{
-    border: none;
+input[type="text"] {
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: inherit;
     outline: none;
-    border-radius: 5px;
-    padding: 5px;
-    font-size: 15px;
-    background-color: rgba(21, 21, 21, 0.095);
+    transition: all 0.3s ease;
 }
 
-input{
-    width: 200px;
+input[type="text"]:focus {
+    border-color: #007BFF;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
 }
 
-button{
-    padding: 5px 10px 5px 10px;
-    font-size: 10px;
-
-    margin-bottom: 20px;
-    cursor: pointer;
-
+/* Botão */
+button.enviar-palavras {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 0.8rem 1.5rem;
     border: none;
     border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: inherit;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+}
 
-    width: 100px;
+button.enviar-palavras:hover {
+    background-color: #0056b3;
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
+}
 
-    background-color: rgb(21, 21, 21);
-    color: rgb(0, 255, 170);
+/* Mensagem de resultado */
+.anagrama {
+    margin-top: 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.anagrama-true {
+    color: #28a745;
+}
+
+.anagrama-false {
+    color: #dc3545;
 }
