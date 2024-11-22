@@ -38,7 +38,7 @@ function verificarAnagrama(primeiraPalavra, segundaPalavra) {
     let palavra2Formatada = segundaPalavra.toUpperCase().replace(/\s+/g, '');
 
     if (palavra1Formatada.length !== palavra2Formatada.length) {
-        mensagem.innerText = 'Tamanhos diferentes!';
+        mensagem.innerText = 'Não são anagramas, tamanhos diferentes!';
         mensagem.className = 'anagrama-false';
         divResultado.appendChild(mensagem);
         return divResultado;
